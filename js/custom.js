@@ -30,4 +30,29 @@ $(function () {
         sw = !sw;
     });
 
+
+    $('.main_product_slide').slick({
+        slidesToShow: 4,
+        arrows: false,
+        dots: true,
+    });
+
+
+    $('.mian_product .arrows .prev').on('click', function () {
+        $('.main_product_slide').slick('slickPrev')
+    });
+
+    $('.mian_product .arrows .next').on('click', function () {
+        $('.main_product_slide').slick('slickNext')
+    });
+
+
+    $('.main_event_slide').slick({
+        slidesToShow: 5,
+        centerMode: true,
+        centerPadding: 0,
+    });
+
+
+
 })
