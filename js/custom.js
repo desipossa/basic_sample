@@ -51,7 +51,28 @@ $(function () {
         slidesToShow: 5,
         centerMode: true,
         centerPadding: 0,
+        arrows: false,
     });
+
+
+    $('.main_event .arrows .prev').on('click', function () {
+        $('.main_event_slide').slick('slickPrev')
+    });
+
+    $('.main_event .arrows .next').on('click', function () {
+        $('.main_event_slide').slick('slickNext')
+    });
+
+    $('.main_customer .news .news_menu button').on('click', function () {
+        let idx = $(this).parent().index();//0,1
+        $('.main_customer .news .news_content>ul')
+            .eq(idx)
+            .addClass('on')
+            .siblings()
+            .removeClass('on');
+
+        $(this).parent().addClass('on').siblings().removeClass('on')
+    })
 
 
 

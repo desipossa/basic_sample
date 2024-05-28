@@ -323,6 +323,7 @@
 }
 
 .main_event .tit {
+    position: relative;
     margin: 0 auto 40px auto;
 }
 
@@ -332,6 +333,27 @@
 
 .main_event .tit .desc {
     text-align: center;
+}
+
+.main_event .arrows button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.main_event .arrows .prev {
+    left: 100px;
+}
+
+.main_event .arrows .next {
+    right: 100px;
+}
+
+.main_event .arrows button i {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    color: #fff;
+    cursor: pointer;
 }
 
 .main_event .main_event_slide .itm img {
@@ -350,4 +372,89 @@
     filter: grayscale(1) brightness(1.5);
 
 
+}
+
+.main_customer .news .news_content>ul {
+    display: none;
+}
+
+.main_customer .news .news_content>ul.on {
+    display: block;
+}
+
+.main_customer .inner {
+    display: flex;
+    gap: 30px;
+}
+
+.main_customer .inner>* {
+    flex: 1;
+    min-width: 0;
+}
+
+.main_customer .news .news_menu {
+    display: flex;
+    gap: 4px;
+    margin: 0 0 16px 0;
+}
+
+.main_customer .news .news_menu li button {
+    border: 1px solid #ddd;
+    padding: 10px 32px;
+}
+
+.main_customer .news .news_menu li.on button {
+    background: #008850;
+    border: 1px solid #008850;
+    color: #fff;
+}
+
+.main_customer .news .news_content li {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+.main_customer .news .news_content a {
+    display: block;
+    line-height: 39px;
+    white-space: nowrap;
+
+    width: calc(100% - 100px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding: 0 0 0 8px;
+}
+
+.main_customer .news .news_content li span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 39px;
+}
+
+.main_customer .map .case {
+    position: relative;
+    background: tomato;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+}
+
+.main_customer .map .case ._map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid #ddd;
+}
+
+.main_customer .map .case ._map .wrap_map {
+    height: 100%;
+}
+
+.main_customer .map .case ._map .wrap_map span {
+    display: none;
 }
