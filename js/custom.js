@@ -72,7 +72,33 @@ $(function () {
             .removeClass('on');
 
         $(this).parent().addClass('on').siblings().removeClass('on')
+    });
+
+    $('.to_top button').on('click', function () {
+        $('html,body').animate({ scrollTop: 0 }, 600)
+    });
+
+
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+        console.log(sct);
+
+        if (sct > 800) {
+            $('.to_top').addClass('on')
+        } else {
+            $('.to_top').removeClass('on')
+        }
+    });
+
+    $('#f_lnk').on('change', function () {
+        let lnk = $(this).val();
+        console.log(lnk);
+
+        if (lnk) {
+            window.open(lnk)
+        }
     })
+
 
 
 

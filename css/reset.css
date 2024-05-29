@@ -33,3 +33,9 @@ button {
     background: transparent;
     cursor: pointer;
 }
+
+address,
+i,
+em {
+    font-style: normal;
+}
